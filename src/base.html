@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html class="js" lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="format-detection" content="telephone=no">
+	<title></title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+	<!-- <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="favicon.ico"> -->
+	<meta name="msapplication-TileColor" content="#200D02">
+	<meta name="theme-color" content="#200D02">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	</script>
+	{% block css %}{% endblock %}
+</head>
+<body class="loading">
+  {% block header %}
+	<header>
+		<div class="title-page">Главная</div>
+		<a class="logo" href="page-main.html"><img src="img/logo.svg"></a>
+		<button class="menu-trigger" title="Menu"></button>
+		<div class="menu-wrapper">
+			<button class="menu-close"></button>
+			<nav class="menu">
+				<a href="#">Главная страница</a>
+				<a href="#">Направления</a>
+				<a href="#">Галерея</a>
+				<a href="#">Расписание</a>
+				<a href="#">Новости</a>
+				<a href="#">Вечеринки</a>
+				<a href="#">Контакты</a>
+			</nav>
+			<div class="address">
+				<p>Адрес</p>
+				<a>г. Санкт-Петербург, ул. Садовая, 28/30 к.1</a>
+			</div>
+			<div class="phone">
+				<p>Телефон</p>
+				<a href="tel: +7 495 540-54-57">+7 495 540-54-57</a>
+			</div>
+			<div class="social">
+				<a class="soc vk" href="#" target="_blank"></a>
+				<a class="soc yt" href="#" target="_blank"></a>
+			</div>
+		</div>
+		<div class="menu-bg"></div>
+  </header>
+	{% endblock %}
+	<main data-scroll-container>
+	{% block content %}{% endblock %}
+	</main>
+	<footer>
+		<a class="logo" href="#">
+
+		</a>
+		<nav class="menu">
+
+		</nav>
+	</footer>
+	{% block modal %}{% endblock %}
+	<script src="js/lib-gsap.js"></script>
+	<script src="js/lib-draggable.js"></script>
+	<script src="js/lib-scrolltrigger.js"></script>
+	<!-- <script src="js/lib-locomotive.js"></script> -->
+	<script src="js/base.js"></script>
+	{% block js %}{% endblock %}
+</body>
+</html>

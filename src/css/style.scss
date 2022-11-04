@@ -1,0 +1,408 @@
+:root {
+  --font-1: "Mulish";
+  --font-2: "FuturaPT";
+  --color-1: #060606;
+  --color-2: #EA2019;
+  --padding-1: clamp(24px,2.2vw,40px);
+  --margin-1: clamp(12px, 1.7vw, 24px);
+  --font-size-1: clamp(24px, 2.4vw, 45px);
+  --font-size-2: clamp(16px, 1.3vw, 25px);
+  --font-size-3: clamp(12px, 1.2vw, 18px);
+}
+
+@import url(element-button.css);
+@import url(module-header.css);
+@import url(module-footer.css);
+
+@font-face{
+	font-family: FuturaPT;
+	font-display: swap;
+	src: url('../fonts/FuturaPT-Demi.woff2') format('woff2'), url('../fonts/FuturaPT-Demi.woff') format('woff');
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: FuturaPT;
+	font-display: swap;
+	src: url('../fonts/FuturaPT-ExtraBold.woff2') format('woff2'), url('../fonts/FuturaPT-ExtraBold.woff') format('woff');
+	font-weight: 800;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: Mulish;
+	font-display: swap;
+	src: url('../fonts/Mulish-Regular.woff2') format('woff2'), url('../fonts/Mulish-Regular.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: Mulish;
+	font-display: swap;
+	src: url('../fonts/Mulish-Medium.woff2') format('woff2'), url('../fonts/Mulish-Medium.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+}
+
+::-moz-selection {
+  background: var(--color-1);
+  color: white;
+}
+
+::selection {
+  background: var(--color-1);
+  color: white;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root,
+html {
+  font-size: 10px;
+}
+
+html,body{
+  width: 100vw;
+  margin: auto;
+}
+
+body {
+  margin: 0;
+  color: white;
+  background-color: var(--color-1);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: var(--font-1), sans-serif;
+  font-weight: 300;
+  font-size: var(--font-size-3);
+  line-height: 1.5;
+  border-radius: 0px;
+  position: relative;
+  overflow: hidden;
+	overflow-y: auto;
+	&::-webkit-scrollbar-track {
+		box-shadow: inset 0 0 0 rgba(0, 0, 0, 0.018);
+		background-color: transparent;
+		border-radius: 2px;
+	}
+	&::-webkit-scrollbar {
+		width: 3px;
+		background-color: var(--color-3);
+	}
+	&::-webkit-scrollbar-thumb {
+		border-radius: 2px;
+		background: var(--color-5);
+	}
+  &.loading{
+    overflow: hidden;
+    &::before{
+      content: "";
+      background-image: url(../img/loading.png);
+      background-repeat: no-repeat;
+      background-size: 144px 144px;
+      background-position: center;
+      width: 100vw;
+      height: 100vh;
+      background-color: #f1f2f3;
+      position: fixed;
+      z-index: 99;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+[class*=icon-] {
+  min-width: 20px;
+  min-height: 20px;
+  width: 22px;
+  height: 22px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  background-size: auto;
+  img{
+    max-width: 100%;
+  }
+}
+
+.icon{
+  img{
+    max-width: 100%;
+  }
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="time"],
+input[type="date"],
+input[type="password"],
+input[type="password" i],
+textarea{
+  font-family: var(--font-1);
+  font-size: 16px;
+  min-height: 60px;
+  width: 100%;
+  padding: 4px 18px;
+  transition: border-color 0.2s ease-in-out;
+  &:hover,
+  &:focus{
+    border-color: var(--color-1);
+    outline: none;
+  }
+  &:-webkit-autofill {
+    box-shadow: inset 0 0 0 50px var(--color3) !important;
+    -webkit-box-shadow: inset 0 0 0 50px var(--color3) !important;
+    -webkit-text-fill-color: white !important;
+    color: white !important;
+  }
+}
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+
+input[type="checkbox"]{
+  position: relative;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border: 1px solid var(--color-1);
+  border-radius: 4px;
+  background-color: var(--color-2);
+  &::after{
+    content: "";
+    width: 44%;
+    height: 26%;
+    border-radius: 0;
+    margin: auto;
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    transition: background .25s ease;
+  }
+  &:checked{
+    background-color: var(--color-1);
+    &::after{
+      border-left: 2px solid;
+      border-bottom: 2px solid;
+      border-color: black;
+      border-radius: 0;
+      -webkit-transform: rotate(-45deg) translate3d(0, 0, 0);
+      transform: rotate(-45deg) translate3d(0, 0, 0);
+      -webkit-transform-origin: center center;
+      transform-origin: center center;
+    }
+  }
+}
+
+form{
+  fieldset{
+    border: none;
+    padding: 0;
+    margin-bottom: 35px;
+  }
+  label{
+    font-size: 16px;
+    line-height: 26px;
+    color: white;
+    font-weight: 300;
+    opacity: 0.6;
+    display: flex;
+		align-items: center;
+		white-space: nowrap;
+		line-height: 1;
+		margin: 8px 0 5px 0;
+		cursor: pointer;
+		input{
+			margin-right: 12px;
+			min-width: 24px;
+			width: 24px;
+			height: 24px;
+		}
+	}
+  p{
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+  input{
+    height: 48px;
+    padding-left: 0;
+    border-radius: 0px;
+    border: none;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    background-color: rgba(255,255,255,0);
+    color: white;
+    &::-moz-placeholder,
+    &::placeholder,
+    &:-moz-placeholder,
+    &::-webkit-input-placeholder {
+      color: white;
+    }
+    &[type=checkbox]{
+      &:valid{
+        border-bottom-color: var(--color-1);
+      }
+    }
+    &:valid {
+      border-bottom: 1px solid rgba(255,255,255,1);
+    }
+  }
+}
+
+h1,.h1 {
+  font-size: clamp(60px, 9vw, 120px);
+}
+
+h2,.h2 {
+  font-family: var(--font-2);
+  font-size: clamp(60px, 9vw, 120px);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+h3,.h3 {
+  font-size: clamp(23px, 2.3vw, 24px);
+}
+
+h4,.h4 {
+  font-size: clamp(23px, 2.3vw, 24px);
+}
+
+h5,.h5 {
+  font-size: clamp(23px, 2.3vw, 24px);
+}
+
+h5,.h6 {
+  font-size: clamp(23px, 2.3vw, 24px);
+}
+
+.title,
+.subtitle {
+  font-family: var(--font-2);
+  margin: 0;
+}
+
+.title{
+  font-weight: 800;
+  font-size: 125px;
+  line-height: 160px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-shadow: 0px 3px 16px rgba(255, 255, 255, 0.4);
+}
+
+.subtitle{
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 1.2;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+ol {
+  counter-reset: myCounter;
+  letter-spacing: -0.03em;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.38;
+  margin-bottom: 16px;
+  ol {
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 400;
+    margin-top: 8px;
+  }
+  li {
+    display: flex;
+    &:before {
+      counter-increment: myCounter;
+      content: counter(myCounter)'.';
+      letter-spacing: -0.03em;
+      display: inline-block;
+      text-align: left;
+      height: auto;
+      width: auto;
+      min-width: 12px;
+      margin-right: 4px;
+    }
+  }
+}
+
+ul,
+ol {
+  padding-left: 0;
+  margin: 0;
+  li {
+    list-style: none;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.6);
+  outline: none;
+  cursor: pointer;
+  transition: color 0.15s ease-in-out;
+  &:hover,
+  &:focus {
+    color: white;
+  }
+}
+
+p {
+  margin: 0 0 var(--margin-1) 0;
+}
+
+.container{
+  max-width: 1400px;
+  width: calc(100% - var(--padding-1) - var(--padding-1));
+  margin: 0 auto;
+}
+
+main{
+  position: relative;
+  max-width: 100vw;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(40px, 5vw, 220px);
+}
+
+section{
+  position: relative;
+}
+
+.divider{
+  width: 100%;
+  height: clamp(60px, 6vw, 106px);
+  margin: 0;
+  border: none;
+  background-repeat: repeat no-repeat;
+  background-position: center;
+  background-size: auto 100%;
+  background-image: url("data:image/svg+xml,%3Csvg width='1920' height='106' viewBox='0 0 1920 106' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='-52.5' y='0.5' width='1993' height='105' fill='%23141414'/%3E%3Cpath d='M25.9963 53L-24.3595 1L-49.9375 1L0.418324 53L-49.9375 105H-24.3595L25.9963 53Z' fill='%231F1F1F'/%3E%3Cpath d='M83.9963 53L33.6405 1H8.0625L58.4183 53L8.0625 105H33.6405L83.9963 53Z' fill='%231F1F1F'/%3E%3Cpath d='M141.996 53L91.6405 1L66.0625 1L116.418 53L66.0625 105H91.6405L141.996 53Z' fill='%231F1F1F'/%3E%3Cpath d='M199.996 53L149.64 1L124.062 1L174.418 53L124.062 105H149.64L199.996 53Z' fill='%231F1F1F'/%3E%3Cpath d='M257.996 53L207.64 1H182.062L232.418 53L182.062 105H207.64L257.996 53Z' fill='%231F1F1F'/%3E%3Cpath d='M315.996 53L265.64 1L240.062 1L290.418 53L240.062 105H265.64L315.996 53Z' fill='%231F1F1F'/%3E%3Cpath d='M373.996 53L323.64 1H298.062L348.418 53L298.062 105H323.64L373.996 53Z' fill='%231F1F1F'/%3E%3Cpath d='M431.996 53L381.64 1L356.062 1L406.418 53L356.062 105H381.64L431.996 53Z' fill='%231F1F1F'/%3E%3Cpath d='M489.996 53L439.64 1L414.062 1L464.418 53L414.062 105H439.64L489.996 53Z' fill='%231F1F1F'/%3E%3Cpath d='M547.996 53L497.64 1H472.062L522.418 53L472.062 105H497.64L547.996 53Z' fill='%231F1F1F'/%3E%3Cpath d='M605.996 53L555.64 1L530.062 1L580.418 53L530.062 105H555.64L605.996 53Z' fill='%231F1F1F'/%3E%3Cpath d='M663.996 53L613.64 1H588.062L638.418 53L588.062 105H613.64L663.996 53Z' fill='%231F1F1F'/%3E%3Cpath d='M721.996 53L671.64 1H646.062L696.418 53L646.062 105H671.64L721.996 53Z' fill='%231F1F1F'/%3E%3Cpath d='M779.996 53L729.64 1L704.062 1L754.418 53L704.062 105H729.64L779.996 53Z' fill='%231F1F1F'/%3E%3Cpath d='M837.996 53L787.64 1H762.062L812.418 53L762.062 105H787.64L837.996 53Z' fill='%231F1F1F'/%3E%3Cpath d='M895.996 53L845.64 1L820.062 1L870.418 53L820.062 105H845.64L895.996 53Z' fill='%231F1F1F'/%3E%3Cpath d='M953.996 53L903.64 1H878.062L928.418 53L878.062 105H903.64L953.996 53Z' fill='%231F1F1F'/%3E%3Cpath d='M1012 53L961.64 1H936.062L986.418 53L936.062 105H961.64L1012 53Z' fill='%231F1F1F'/%3E%3Cpath d='M1070 53L1019.64 1L994.062 1L1044.42 53L994.062 105H1019.64L1070 53Z' fill='%231F1F1F'/%3E%3Cpath d='M1128 53L1077.64 1H1052.06L1102.42 53L1052.06 105H1077.64L1128 53Z' fill='%231F1F1F'/%3E%3Cpath d='M1186 53L1135.64 1L1110.06 1L1160.42 53L1110.06 105H1135.64L1186 53Z' fill='%231F1F1F'/%3E%3Cpath d='M1244 53L1193.64 1L1168.06 1L1218.42 53L1168.06 105H1193.64L1244 53Z' fill='%231F1F1F'/%3E%3Cpath d='M1302 53L1251.64 1L1226.06 1L1276.42 53L1226.06 105H1251.64L1302 53Z' fill='%231F1F1F'/%3E%3Cpath d='M1360 53L1309.64 1L1284.06 1L1334.42 53L1284.06 105H1309.64L1360 53Z' fill='%231F1F1F'/%3E%3Cpath d='M1418 53L1367.64 1H1342.06L1392.42 53L1342.06 105H1367.64L1418 53Z' fill='%231F1F1F'/%3E%3Cpath d='M1476 53L1425.64 1L1400.06 1L1450.42 53L1400.06 105H1425.64L1476 53Z' fill='%23E30613'/%3E%3Cpath d='M1534 53L1483.64 1L1458.06 1L1508.42 53L1458.06 105H1483.64L1534 53Z' fill='%231F1F1F'/%3E%3Cpath d='M1592 53L1541.64 1L1516.06 1L1566.42 53L1516.06 105H1541.64L1592 53Z' fill='%231F1F1F'/%3E%3Cpath d='M1650 53L1599.64 1L1574.06 1L1624.42 53L1574.06 105H1599.64L1650 53Z' fill='%231F1F1F'/%3E%3Cpath d='M1708 53L1657.64 1H1632.06L1682.42 53L1632.06 105H1657.64L1708 53Z' fill='%231F1F1F'/%3E%3Cpath d='M1766 53L1715.64 1L1690.06 1L1740.42 53L1690.06 105H1715.64L1766 53Z' fill='%231F1F1F'/%3E%3Cpath d='M1824 53L1773.64 1L1748.06 1L1798.42 53L1748.06 105H1773.64L1824 53Z' fill='%231F1F1F'/%3E%3Cpath d='M1882 53L1831.64 1L1806.06 1L1856.42 53L1806.06 105H1831.64L1882 53Z' fill='%231F1F1F'/%3E%3Cpath d='M1940 53L1889.64 1L1864.06 1L1914.42 53L1864.06 105H1889.64L1940 53Z' fill='%231F1F1F'/%3E%3Crect x='-52.5' y='0.5' width='1993' height='105' stroke='%23141414'/%3E%3C/svg%3E");
+}
