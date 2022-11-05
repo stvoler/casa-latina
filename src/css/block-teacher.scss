@@ -6,7 +6,7 @@
 	}
 	&-items{
 		display: grid;
-		grid-template-columns: auto 1fr;
+		grid-template-columns: 410px 1fr;
 		grid-column-gap: clamp(50px, 15vw, 210px);
 	}
 	&-nav{
@@ -62,11 +62,13 @@
 			display: grid;
 			grid-template-columns: 240px 1fr;
 			opacity: 0;
-			height: 0px;
-			transition: opacity 0.18s ease-in-out, height 0.18s ease-in-out;
+			position: absolute;
+			transform: scale(0.9);
+			transition: opacity 0.27s ease-in-out, transform 0.15s ease-in-out;
 			&.active{
 				opacity: 1;
-				height: 100%;
+				transform: scale(1);
+				position: relative;
 			}
 		}
 		.img{

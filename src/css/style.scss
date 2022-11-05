@@ -426,7 +426,7 @@ main{
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  gap: clamp(40px, 5vw, 220px);
+  gap: clamp(40px, 10vw, 250px);
 }
 
 section{
