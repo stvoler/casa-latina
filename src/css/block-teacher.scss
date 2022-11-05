@@ -1,0 +1,64 @@
+.teacher{
+	&-block{
+		display: flex;
+		flex-direction: column;
+		gap: 50px;
+	}
+	&-items{
+		display: flex;
+    flex-direction: column;
+    position: relative;
+		gap: 25px;
+		> a{
+			&:hover{
+				color: var(--color-2);
+				&::before{
+					font-size: 30px;
+				}
+			}
+		}
+		a{
+			font-weight: 600;
+			font-size: 30px;
+			line-height: 1;
+			text-transform: uppercase;
+			color: white;
+			font-family: var(--font-2);
+			display: flex;
+			gap: 4px;
+			transition: color 0.15s ease-in-out;
+			&::before{
+				content: '—';
+				font-size: 0px;
+				line-height: 30px;
+				transition: font-size 0.15s ease-in-out;
+			}
+		}
+	}
+	&-content{
+		position: absolute;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		width: 50%;
+		display: flex;
+    flex-direction: column;
+    justify-content: center;
+		.title-4{
+			text-align: right;
+		}
+		.text-1{
+			text-align: right;
+		}
+		.item{
+			display: grid;
+			grid-template-columns: 240px 1fr;
+		}
+		.img{
+			grid-column: 2;
+			grid-row: 1/5;
+			margin-left: -10%;
+			z-index: -1;
+		}
+	}
+}

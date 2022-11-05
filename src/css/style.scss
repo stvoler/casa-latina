@@ -3,6 +3,7 @@
   --font-2: "FuturaPT";
   --color-1: #060606;
   --color-2: #EA2019;
+  --color-3: rgba(255,255,255,0.5);
   --padding-1: clamp(24px,2.2vw,40px);
   --margin-1: clamp(12px, 1.7vw, 24px);
   --font-size-1: clamp(24px, 2.4vw, 45px);
@@ -93,11 +94,11 @@ body {
 	}
 	&::-webkit-scrollbar {
 		width: 3px;
-		background-color: var(--color-2);
+		background-color: var(--color-1);
 	}
 	&::-webkit-scrollbar-thumb {
 		border-radius: 2px;
-		background: var(--color-1);
+		background: var(--color-3);
 	}
   &.loading{
     overflow: hidden;
@@ -300,18 +301,14 @@ h5,.h6 {
   font-size: clamp(23px, 2.3vw, 24px);
 }
 
-.title-1,
-.title-2,
-.title-3,
-.subtitle {
-  font-family: var(--font-2);
-  margin: 0;
-}
-
 .title{
+  &-page,
   &-1,
   &-2,
-  &-3{
+  &-3,
+  &-4{
+    font-family: var(--font-2);
+    margin: 0;
     text-transform: uppercase;
   }
   &-1,
@@ -320,12 +317,12 @@ h5,.h6 {
     letter-spacing: 0.1em;
   }
   &-1{
-    font-size: 125px;
-    line-height: 160px;
+    font-size: clamp(70px, 10vw, 125px);
+    line-height: 1;
     text-shadow: 0px 3px 16px rgba(255, 255, 255, 0.4);
   }
   &-2{
-    font-size: 70px;
+    font-size: clamp(40px, 6vw, 70px);
     line-height: 1;
     div{
       color: rgba(255,255,255,0);
@@ -335,18 +332,29 @@ h5,.h6 {
   }
   &-3{
     font-weight: 600;
-    font-size: 70px;
+    font-size: clamp(36px, 6vw, 70px);
     line-height: 1;
     letter-spacing: 0.05em;
     color: rgba(255,255,255,0);
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: rgba(255,255,255,1);
   }
+  &-4{
+    font-weight: 600;
+    font-size: clamp(20px, 4vw, 50px);
+    line-height: 1;
+  }
+  &-5{
+    font-weight: 600;
+    font-size: clamp(20px, 2.3vw, 30px);
+    letter-spacing: 0.05em;
+    line-height: 1.2;
+  }
 }
 
 .subtitle{
-  font-weight: 600;
-  font-size: 30px;
+  font-weight: 500;
+  font-size: 26px;
   line-height: 1.2;
   letter-spacing: 0.05em;
   text-transform: uppercase;
