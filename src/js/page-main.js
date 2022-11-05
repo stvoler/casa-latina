@@ -51,8 +51,32 @@ const accordionTabs = () => {
   }
 }
 
+const teacherTabs = () => {
+  "use strict";
+  document.querySelectorAll("main").forEach((tab) => {
+    const tabHeading = tab.querySelectorAll(".teacher-nav a");
+    const tabContent = tab.querySelectorAll(".teacher-content .item");
+    let tabName;
+    tabHeading.forEach((element) => {
+      element.addEventListener("mouseover", () => {
+        tabHeading.forEach((item) => {
+          item.classList.remove("active");
+        });
+        element.classList.add("active");
+        tabName = element.getAttribute("data-tab-index");
+        tabContent.forEach((item) => {
+          item.classList.contains(tabName)
+            ? item.classList.add("active")
+            : item.classList.remove("active");
+        });
+      });
+    });
+  });
+}
+
 const initScripts = () => {
   accordionTabs();
+  teacherTabs();
 };
 
 document.addEventListener('DOMContentLoaded', initScripts);
