@@ -25,15 +25,7 @@ if (document.getElementsByClassName("menu-wrapper").length) {
   }
 }
 
-if (document.getElementsByClassName("menu-title").length) {
-  const footerMenuTitle = document.querySelectorAll('footer .menu-title');
-  footerMenuTitle.forEach(el => {
-    el.addEventListener('click', () => {
-      el.classList.toggle('active');
-      el.parentNode.classList.toggle('active');
-    })
-  })
-}
+
 
 gsap.registerPlugin(ScrollTrigger, Draggable);
 
@@ -55,45 +47,3 @@ window.addEventListener('scroll', function() {
   else { remove_class_on_scroll() }
   
 })
-
-// new ResizeObserver(() => scroll.update()).observe(document.querySelector("[data-scroll-container]"))
-
-// const menuEl = document.querySelector('[data-scroll-container]');
-// const scroll = new LocomotiveScroll({
-// 	el: menuEl, 
-// 	smooth: true,
-// 	smoothMobile: false,
-// 	reloadOnContextChange: true,
-// 	smartphone: {
-// 			smooth: false,
-// 			breakpoint: 800
-// 	},
-// 	tablet: {
-// 			smooth: false,
-// 			breakpoint: 800
-// 	},
-// });
-
-// scroll.on("scroll", ScrollTrigger.update);
-
-// ScrollTrigger.scrollerProxy("[data-scroll-container]", {
-// 	scrollTop(value) {
-// 		return arguments.length
-// 			? scroll.scrollTo(value, 0, 0)
-// 			: scroll.scroll.instance.scroll.y;
-// 	},
-// 	getBoundingClientRect() {
-// 		return {
-// 			top: 0,
-// 			left: 0,
-// 			width: window.innerWidth,
-// 			height: window.innerHeight
-// 		};
-// 	}
-// });
-// ScrollTrigger.defaults({
-// 	toggleActions: "restart pause resume pause",
-// 	scroller: "[data-scroll-container]"
-// });
-
-// ScrollTrigger.addEventListener("refresh", () => scroll.update());

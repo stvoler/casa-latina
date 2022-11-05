@@ -22,13 +22,6 @@ header{
 		gap: 6px;
 		align-items: center;
 		background-color: var(--color-1);
-		&.is-menu{
-			> .btn,
-			> .menu-trigger,
-			> .personal{
-				opacity: 0;
-			}
-		}
 		nav{
 			display: none;
 		}
@@ -71,7 +64,7 @@ header{
 		font-weight: 600;
 		font-size: clamp(13px, 0.9vw, 18px);
 		line-height: 1.4;
-		color: var(--color-3);
+		color: var(--color-2);
 		white-space: nowrap;
 		transition: color 0.15s ease-in-out;
 		&:hover{
@@ -83,13 +76,12 @@ header{
 .menu{
 	&-trigger{
 		cursor: pointer;
-		width: 50px;
-		height: 50px;
-		border: 1px solid var(--color-3);
-		border-radius: 50%;
+		width: 63px;
+		height: 13px;
 		background-repeat: no-repeat;
 		background-position: center;
-		background-image: url("data:image/svg+xml,%3Csvg width='23' height='18' viewBox='0 0 23 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='23' height='1.7037' fill='white'/%3E%3Crect y='7.66699' width='23' height='1.7037' fill='white'/%3E%3Crect y='15.333' width='23' height='1.7037' fill='white'/%3E%3C/svg%3E");
+		background-color: transparent;
+		background-image: url("data:image/svg+xml,%3Csvg width='62' height='13' viewBox='0 0 62 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M62 13H0V9.88184H62V13ZM62 0V3.11816H0V0H62Z' fill='white'/%3E%3C/svg%3E");
 	}
 	&-wrapper{
 		display: none;
@@ -102,7 +94,7 @@ header{
 		flex-direction: column;
 		gap: 10px;
 		padding: clamp(24px,2.2vw,50px);
-		background-color: var(--color-5);
+		background-color: var(--color-1);
 		color: black;
 		z-index: 9;
 		&.active{
@@ -176,35 +168,6 @@ header{
 				display: block;
 				background-color: transparent;
 			}
-			&-wrapper{
-				.personal{
-					border-color: rgba(20, 20, 20, 0.3);
-				}
-			}
-		}
-		.personal{
-			width: 50px;
-			height: 50px;
-			border: 1px solid var(--color-3);
-			border-radius: 50%;
-			background-repeat: no-repeat;
-			background-position: center;
-			&::after{
-				width: 22px;
-				height: 22px;
-				opacity: 1;
-			}
-			div{
-				display: none;
-			}
-		}
-		.logo{
-			&-text{
-				opacity: 1;
-			}
-		}
-		.btn{
-			display: block;
 		}
 	}
 }
@@ -212,10 +175,6 @@ header{
 @media(max-width: 700px){
 	header{
 		grid-template-columns: auto 1fr;
-		> .btn,
-		> .personal{
-			display: none;
-		}
 		&.is-fixed{
 			grid-template-columns: auto 1fr;
 			> .btn,
@@ -237,23 +196,6 @@ header{
 }
 
 @media(max-width: 600px){
-	header{
-		&.is-fixed{
-			.logo-text{
-				opacity: 1;
-			}
-		}
-		&.is-menu{
-			max-width: clamp(335px,72vw,640px);
-			margin: 0 0 0 auto;
-			.logo{
-				z-index: 99;
-				&-text{
-					filter: invert(1);
-				}
-			}
-		}
-	}
 	.menu{
 		&-wrapper{
 			right: 0;
@@ -267,12 +209,6 @@ header{
 				a{
 					font-size: 40px;
 				}
-			}
-			.phone{
-				font-size: 24px;
-			}
-			.buttons{
-				margin: 30px 0 0 0;
 			}
 		}
 	}

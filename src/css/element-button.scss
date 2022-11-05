@@ -18,15 +18,11 @@
     background-color: #FF212E;
 	}
 	&.is-border{
-		outline: solid 1px var(--color-3);
+		outline: solid 1px var(--color-1);
 		background-color: rgba(255,255,255,0);
 		&:hover{
 			outline: solid 2px var(--color-2);
 		}
-	}
-	&.is-small{
-		font-size: 13px;
-		min-height: 38px;
 	}
 	&.is-disable{
     pointer-events: none;
