@@ -3,6 +3,9 @@
 @import url(block-styles.css);
 @import url(block-teacher.css);
 @import url(block-how.css);
+@import url(block-trial.css);
+@import url(block-qa.css);
+@import url(block-contacts.css);
 
 .nav{
 	&-block{
@@ -12,7 +15,7 @@
 		.title{
 			color: white;
 			margin-bottom: 30px;
-			font-size: var(--font-size-2);
+			font-size: var(--font-size-3);
 		}
 		.text{
 			line-height: 1.4;
@@ -127,7 +130,7 @@
 				line-height: 1.4;
 			}
 			&-2{
-				font-size: var(--font-size-3);
+				font-size: var(--font-size-4);
 				line-height: 1.4;
 				letter-spacing: 0.02em;
 				color: rgba(255, 255, 255, 0.6);

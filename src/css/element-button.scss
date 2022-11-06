@@ -1,21 +1,22 @@
 .btn{
-	padding: clamp(9px, 0.9vw, 13px) clamp(16px, 1.9vw, 25px);
+	padding: clamp(10px, 0.9vw, 11px) clamp(32px, 4vw, 60px);
+	min-height: clamp(36px, 3.5vw, 52px);
 	height: fit-content;
-	min-height: clamp(34px, 2.9vw, 50px);
-	border-radius: 48px;
 	width: fit-content;
 	white-space: nowrap;
 	text-align: center;
   gap: 10px;
   color: white;
-	font-weight: 600;
-	font-size: var(--font-size-3);
-  background-color: var(--color-2);
+	background-color: transparent;
+	text-transform: uppercase;
+	font-weight: 500;
+	font-size: var(--font-size-4);
+	letter-spacing: 0.05em;
   cursor: pointer;
-  border: none;
-	transition: color 0.15s ease-in-out,outline 0.15s ease-in-out, background-color 0.15s ease-in-out;
+	border: 2px solid white;
+	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
   &:hover{
-    background-color: #FF212E;
+    background-color: var(--color-2);
 	}
 	&.is-border{
 		outline: solid 1px var(--color-1);

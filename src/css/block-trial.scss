@@ -1,0 +1,39 @@
+.trial{
+	&-block{
+		display: grid;
+		grid-template-columns: 45% 1fr;
+		grid-column-gap: clamp(22px, 9vw, 118px);
+		grid-row-gap: clamp(30px, 4.5vw, 60px);
+		.title-2{
+			grid-column: 1/-1;
+		}
+		.title-5{
+			grid-column: 1/-1;
+			margin-bottom: 36px;
+		}
+		form{
+			display: grid;
+		  grid-template-columns: 1fr 1fr;
+			grid-template-rows: auto auto auto 1fr;
+			gap: 0px;
+		}
+		.btn{
+			margin-top: 60px;
+			margin-left: 2px;
+		}
+	}
+	&-name{
+		border-top: 1px solid white;
+		border-left: 1px solid white;
+	}
+	&-tel{
+		border-top: 1px solid white;
+		border-right: 1px solid white;
+	}
+	&-message{
+		border-left: 1px solid white;
+		border-right: 1px solid white;
+		border-bottom: 1px solid white;
+		grid-column: 1/-1;
+	}
+}

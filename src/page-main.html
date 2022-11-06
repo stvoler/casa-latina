@@ -12,7 +12,7 @@
 		</div>
 	</div>
 	<div class="item-2">
-		<div class="title-4">Первое занятие бесплатно</div>
+		<div class="title-5">Первое занятие бесплатно</div>
 		<div class="text">
 			<p>Скидка на абонемент при покупке в тот же день  —  20%</p>
 		</div>
@@ -568,7 +568,7 @@
 		<div class="img"><img src="img/how-2.png"></div>
 		<p>
 			Свяжитесь с нами! <br>
-			По телефону, через соц. сети, форму обратной связи <br>
+			<span>По телефону, через соц. сети, форму обратной связи </span><br>
 			или приходите в гости
 		</p>
 	</div>
@@ -581,12 +581,55 @@
 		<p>В назначенное время приходите по адресу: ул. Садовая, д. 28</p>
 	</div>
 </section>
+<section class="trial-block container">
+	<div class="title-2"><div>Пробный </div>урок</div>
+	<div class="img"><img src="img/trial.jpg"></div>
+	<form>
+		<div class="title-5">Укажите данные в форме ниже</div>
+		<fieldset class="trial-name">
+			<input type="text" id="trial_name" name="trial_name" placeholder=" " required="">
+			<label for="trial_name">Ваше имя *</label>
+		</fieldset>
+		<fieldset class="trial-tel">
+			<input type="tel" id="trial_phone" name="trial_phone" placeholder=" " required="">
+			<label for="trial_phone">Телефон для связи *</label>
+		</fieldset>
+		<fieldset class="trial-message">
+			<input type="text" id="trial_message" name="trial_message" placeholder=" " required="">
+			<label for="trial_message">Вопрос/сообщение (необязательно)</label>
+		</fieldset>
+		<button type="submit" class="btn">Записаться</button>
+	</form>
+</section>
+<section class="qa-block container">
+	<div class="title-2"><div>Вопросы </div>и ответы</div>
+</section>
+<section class="contacts-block container">
+	<div class="title-2"><div>Наши </div>контакты</div>
+	<div class="contacts-video"><img src="img/contacts-video.jpg"></div>
+	<div class="address">
+		<div>Адрес</div>
+		<div>Санкт-Петербург, ул. Садовая, 28/30 к.1</div>
+	</div>
+	<div class="phone">
+		<div>Телефон</p>
+		<div><a href="tel: +7(812)310-00-79">+7(812)310-00-79</a></div>
+	</div>
+	<div class="social">
+		<div>Подписаться</div>
+		<div>
+			<div class="soc vk"></div>
+			<div class="soc ig"></div>
+			<div class="soc yt"></div>
+			<div class="soc fb"></div>
+		</div>
+	</div>
+</section>
 {% endblock %}
 {% block modal %}
 
 {% endblock %}
 {% block js %}
 <script src="js/lib-swiper.js"></script>
-<script src="js/maps.js"></script>
 <script src="js/page-main.js"></script>
 {% endblock %}
