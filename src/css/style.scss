@@ -49,13 +49,13 @@
 }
 
 ::-moz-selection {
-  background: var(--color-1);
-  color: white;
+  background: white;
+  color: var(--color-1);
 }
 
 ::selection {
-  background: var(--color-1);
-  color: white;
+  background: white;
+  color: var(--color-1);
 }
 
 *,

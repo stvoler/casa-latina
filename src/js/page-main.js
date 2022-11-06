@@ -42,9 +42,6 @@ const accordionTabs = () => {
     const tabTitle = document.querySelectorAll('.style-block .item');
     tabTitle.forEach(el => {
       el.addEventListener('click', () => {
-        tabTitle.forEach(el => {
-          el.classList.remove('active');
-        })
         el.classList.toggle('active');
       })
     })
@@ -74,9 +71,21 @@ const teacherTabs = () => {
   });
 }
 
+const qaTabs = () => {
+  if (document.getElementsByClassName("qa-block").length) {
+    const qaTab = document.querySelectorAll('.qa-block .item .title-5');
+    qaTab.forEach(el => {
+      el.addEventListener('click', () => {
+        el.parentNode.classList.toggle('active');
+      })
+    })
+  }
+}
+
 const initScripts = () => {
   accordionTabs();
   teacherTabs();
+  qaTabs();
 };
 
 document.addEventListener('DOMContentLoaded', initScripts);

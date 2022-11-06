@@ -1,0 +1,36 @@
+.qa{
+	&-block{
+		display: flex;
+		flex-direction: column;
+		gap: 50px;
+		.items{
+			border: 2px solid white;
+			.item{
+				&:last-child{
+					border-bottom: none;
+				}
+			}
+		}
+		.item{
+			padding: 28px 33px;
+			border-bottom: 2px solid white;
+			display: flex;
+			flex-direction: column;
+			gap: 0px;
+			&.active{
+				gap: 20px;
+				.text{
+					opacity: 1;
+					height: auto;
+				}
+			}
+		}
+		.title-5{
+			cursor: pointer;
+		}
+		.text{
+			height: 0px;
+			opacity: 0;
+		}
+	}
+}
