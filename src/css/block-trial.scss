@@ -1,7 +1,7 @@
 .trial{
 	&-block{
 		display: grid;
-		grid-template-columns: 45% 1fr;
+		grid-template-columns: auto 1fr;
 		grid-column-gap: clamp(22px, 9vw, 118px);
 		grid-row-gap: clamp(30px, 4.5vw, 60px);
 		.title-2{
@@ -10,6 +10,26 @@
 		.title-5{
 			grid-column: 1/-1;
 			margin-bottom: 36px;
+		}
+		.img{
+			position: relative;
+			display: block;
+			width: fit-content;
+			&::after{
+				content: "";
+				width: clamp(121px,23vw,270px);
+				height: clamp(121px,23vw,270px);
+				border-radius: 50%;
+				background-color: var(--color-2);
+				display: block;
+				position: absolute;
+				bottom: -18%;
+				right: -30%;
+				z-index: -1;
+			}
+			img{
+				display: block;
+			}
 		}
 		form{
 			display: grid;
