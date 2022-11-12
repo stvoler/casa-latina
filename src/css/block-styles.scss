@@ -55,11 +55,18 @@
 	&-content{
 		display: none;
 		grid-template-columns: auto auto 1fr;
-		grid-column-gap: 60px;
+		grid-column-gap: clamp(30px, 4.5vw, 60px);
+		.img{
+			width: clamp(180px, 41vw, 635px);	
+		}
+		img{
+			display: block;
+			width: 100%;
+		}
 	}
 	&-links{
 		font-weight: 400;
-		font-size: 30px;
+		font-size: var(--font-size-2);
 		line-height: 120%;
 		letter-spacing: 0.05em;
 		text-transform: uppercase;
@@ -93,6 +100,7 @@
 	li{
 		display: flex;
 		align-items: center;
+		white-space: nowrap;
 		gap: 13px;
 	}
 }

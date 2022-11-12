@@ -4,7 +4,7 @@
   --color-1: #060606;
   --color-2: #EA2019;
   --color-3: rgba(255,255,255,0.5);
-  --padding-1: clamp(24px,2.2vw,40px);
+  --padding-1: clamp(10px,2.3vw,40px);
   --margin-1: clamp(12px, 1.7vw, 24px);
   --font-size-1: clamp(24px, 2.4vw, 45px);
   --font-size-2: clamp(20px, 2.6vw, 30px);
@@ -308,12 +308,12 @@ h5,.h6 {
     letter-spacing: 0.1em;
   }
   &-1{
-    font-size: clamp(70px, 10vw, 125px);
+    font-size: clamp(70px, 8vw, 125px);
     line-height: 1;
     text-shadow: 0px 3px 16px rgba(255, 255, 255, 0.4);
   }
   &-2{
-    font-size: clamp(40px, 6vw, 70px);
+    font-size: clamp(40px, 5vw, 70px);
     line-height: 1;
     div{
       color: rgba(255,255,255,0);
@@ -323,7 +323,7 @@ h5,.h6 {
   }
   &-3{
     font-weight: 600;
-    font-size: clamp(36px, 6vw, 70px);
+    font-size: clamp(36px, 5vw, 70px);
     line-height: 1;
     letter-spacing: 0.05em;
     color: rgba(255,255,255,0);
@@ -332,12 +332,12 @@ h5,.h6 {
   }
   &-4{
     font-weight: 600;
-    font-size: clamp(20px, 4vw, 50px);
+    font-size: clamp(20px, 3.8vw, 50px);
     line-height: 1;
   }
   &-5{
     font-weight: 600;
-    font-size: clamp(20px, 2.3vw, 30px);
+    font-size: clamp(20px, 2.1vw, 30px);
     letter-spacing: 0.05em;
     line-height: 1.2;
   }

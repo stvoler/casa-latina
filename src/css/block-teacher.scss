@@ -7,7 +7,7 @@
 	&-items{
 		display: grid;
 		grid-template-columns: 410px 1fr;
-		grid-column-gap: clamp(50px, 15vw, 210px);
+		grid-column-gap: clamp(40px,11vw,210px);
 	}
 	&-nav{
 		display: flex;
@@ -20,13 +20,13 @@
 			&:hover{
 				color: var(--color-2);
 				&::before{
-					font-size: 30px;
+					font-size: var(--font-size-2);
 				}
 			}
 		}
 		a{
 			font-weight: 600;
-			font-size: 30px;
+			font-size: var(--font-size-2);
 			line-height: 1;
 			text-transform: uppercase;
 			color: white;
