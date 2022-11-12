@@ -8,8 +8,6 @@
 		grid-column-gap: 50px;
 		grid-row-gap: 30px;
 		padding-top: 125px;
-		padding-left: var(--padding-1);
-		padding-right: var(--padding-1);
 		img{
 			display: block;
 			max-width: 100%;
@@ -69,17 +67,19 @@
 	}
 }
 
-@media(max-width: 600px){
+@media(max-width: 900px){
 	.start {
 		&-block {
-			.item-1{
-				grid-template-columns: 1/-1;
-			}
-			.item-2{
-				grid-column: 1;
+			min-height: auto;
+			.item-3{
+				grid-column: 3/-1;
+				grid-row: 3;
+				.text{
+					display: none;
+				}
 			}
 			.img-2{
-				grid-column: 2;
+				display: none;
 			}
 		}
 	}

@@ -104,3 +104,11 @@
 		gap: 13px;
 	}
 }
+
+@media(max-width: 800px){
+	.style{
+		&-content{
+			grid-template-columns: auto 1fr;
+		}
+	}
+}
