@@ -14,9 +14,10 @@
 	letter-spacing: 0.05em;
   cursor: pointer;
 	border: 2px solid white;
-	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
   &:hover{
     background-color: var(--color-2);
+		border-color: var(--color-2);
 	}
 	&.is-border{
 		outline: solid 1px var(--color-1);

@@ -3,8 +3,8 @@
 		color: white;
 		min-height: 100vh;
 		display: grid;
-		grid-template-columns: auto auto 30px 1fr;
-		grid-template-rows: clamp(430px, 55vh, 530px) 30px 1fr;
+		grid-template-columns: clamp(260px, 22vw, 310px) auto 30px 1fr;
+		grid-template-rows: auto 30px 1fr;
 		grid-column-gap: 50px;
 		grid-row-gap: 30px;
 		padding-top: 125px;
@@ -53,6 +53,8 @@
 		}
 		.img-2{
 			grid-column: 2/4;
+			margin-top: 30px;
+			margin-left: clamp(30px, 5vw, 80px);
 		}
 		.img-3{
 			width: clamp(280px, 30vw, 473px);
