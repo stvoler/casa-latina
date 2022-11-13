@@ -114,14 +114,14 @@ footer{
 	}
 }
 
-@media(max-width: 800px){
-	footer{
-		grid-template-columns: auto 1fr;
-	}
-}
-
 @media(max-width: 600px){
 	footer{
-	
+		grid-template-columns: auto 1fr;
+		.social{
+			grid-column: 1/-1;
+			grid-row: 3;
+			justify-content: flex-start;
+			margin-top: 10px;
+		}
 	}
 }
