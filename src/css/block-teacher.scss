@@ -93,3 +93,53 @@
 		}
 	}
 }
+
+@media(max-width: 700px){
+	.teacher{
+		&-items{
+			display: flex;
+			flex-direction: column;
+		}
+		&-content{
+			order: 1;
+			gap: 17px;
+			.item{
+				position: relative;
+				opacity: 1;
+				transform: none;
+				&.active{
+					padding-bottom: 20px;
+					.title-4{
+						text-align: right;
+					}
+					.img{
+						display: block;
+					}
+					.text{
+						grid-column: 1;
+						padding-top: clamp(39px,9vw,108px);
+						&-1{
+							display: block;
+						}
+					}
+				}
+			}
+			.title-4{
+				text-align: left;
+			}
+			.img{
+				display: none;
+			}
+			.text{
+				grid-column: 1/-1;
+				padding-top: 0;
+				&-1{
+					display: none;
+				}
+			}
+		}
+		&-nav{
+			display: none;
+		}
+	}
+}
