@@ -238,7 +238,7 @@ fieldset {
     min-height: clamp(37px, 7vw, 80px);
     border: 2px solid white;
     background-color: transparent;
-    padding: 10px 20px;
+    padding: clamp(9px, 1vw, 10px) clamp(10px, 1.3vw, 20px);
     font-size: var(--font-size-4);
     &::-webKit-input-placeholder {
       font-size: var(--font-size-4);
