@@ -82,10 +82,23 @@ const qaTabs = () => {
   }
 }
 
+const teacherMobTabs = () => {
+  let mobWidth = window.matchMedia("(max-width: 700px)");
+  if (mobWidth.matches) {
+    const teacherItem = document.querySelectorAll('.teacher-content .item');
+    teacherItem.forEach(el => {
+      el.addEventListener('click', () => {
+        el.classList.toggle('active');
+      })
+    })
+  }
+}
+
 const initScripts = () => {
   accordionTabs();
   teacherTabs();
   qaTabs();
+  teacherMobTabs();
 };
 
 document.addEventListener('DOMContentLoaded', initScripts);

@@ -58,3 +58,21 @@
 		grid-column: 1/-1;
 	}
 }
+
+@media(max-width: 900px){
+	.trial{
+		&-block{
+			fieldset{
+				input{
+					border: 0px solid white;
+				}
+			}
+		}
+		&-name{
+			border-right: 1px solid white;
+		}
+		&-message{
+			border-top: 1px solid white;
+		}
+	}
+}
