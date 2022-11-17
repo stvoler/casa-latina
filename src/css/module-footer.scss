@@ -5,7 +5,7 @@ footer{
 	grid-template-rows: auto auto auto 1fr;
 	grid-column-gap: clamp(40px,6vw,138px);
 	grid-row-gap: clamp(5px,2vw,30px);
-	padding-top: clamp(40px,5vw,120px);
+	padding-top: clamp(90px,5vw,120px);
 	padding-bottom: 40px;
 	padding-left: var(--padding-1);
 	padding-right: var(--padding-1);
@@ -122,6 +122,10 @@ footer{
 			grid-row: 3;
 			justify-content: flex-start;
 			margin-top: 10px;
+		}
+		.scrollup{
+			margin: auto 0 auto auto;
+			grid-row: 1/4;
 		}
 	}
 }

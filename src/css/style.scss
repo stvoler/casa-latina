@@ -225,7 +225,7 @@ fieldset {
     position: absolute;
     left: 20px;
     top: 0;
-    transform: translateY(27px);
+    transform: translateY(clamp(10px, 2vw, 27px));
     margin: 0;
     padding: 0;
     font-weight: 500;
@@ -254,7 +254,7 @@ fieldset {
     }
     &:focus,&:not(:placeholder-shown) {
       + label{
-        transform: translateY(10px);
+        transform: translateY(4px);
         font-size: 12px;
         opacity: .4;
       }

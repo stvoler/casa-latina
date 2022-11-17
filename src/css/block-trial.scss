@@ -76,3 +76,30 @@
 		}
 	}
 }
+
+@media(max-width: 700px){
+	.trial{
+		&-block{
+			form{
+				grid-template-columns: 1fr;
+			}
+		}
+		&-tel{
+			border-left: 1px solid white;
+		}
+	}
+}
+
+@media(max-width: 600px){
+	.trial{
+		&-block{
+			form{
+				grid-column: 1/-1;
+			}
+			.img{
+				width: 90%;
+				grid-column: 1/-1;
+			}
+		}
+	}
+}

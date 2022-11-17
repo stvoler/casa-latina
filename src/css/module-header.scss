@@ -96,8 +96,8 @@ header{
 		color: white;
 		z-index: 9;
 		grid-template-columns: clamp(220px, 30vw, 530px) clamp(200px, 22vw, 290px) 1fr;
-		grid-column-gap: clamp(50px, 7vw, 100px);
-		grid-row-gap: clamp(45px, 7vh, 80px);
+		grid-column-gap: clamp(50px, 5.3vw, 100px);
+		grid-row-gap: clamp(45px, 5vh, 80px);
 		&.active{
 			display: grid;
 		}
@@ -167,6 +167,7 @@ header{
 			display: flex;
 			flex-direction: column;
 			gap: clamp(4px, 1.2vw, 20px);
+			margin: auto 0 0 0;
 			div,
 			a{
 				color: var(--color-2);
@@ -194,7 +195,8 @@ header{
 			grid-row: 3;
 			display: flex;
 			align-items: center;
-			gap: clamp(10px, 1.5vw, 20px);	
+			gap: clamp(10px, 1.5vw, 20px);
+			margin: auto 0 0 0;
 		}
 		.soc{
 			width: clamp(36px, 3vw, 42px);
@@ -230,6 +232,17 @@ header{
 		left: 0;
 		width: 100vw;
 		height: 100vh;
+	}
+}
+
+@media(max-width: 1200px){
+	.menu{
+		&-wrapper{
+			grid-template-columns: auto auto auto;
+			.img{
+				display: none;
+			}
+		}
 	}
 }
 
