@@ -27,3 +27,15 @@
 		}
 	}
 }
+
+@media(max-width: 500px){
+	.how{
+		&-block{
+			grid-template-columns: 1fr;
+			.item{
+				align-items: center;
+				text-align: center;
+			}
+		}
+	}
+}

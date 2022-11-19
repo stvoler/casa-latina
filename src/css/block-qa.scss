@@ -12,7 +12,7 @@
 			}
 		}
 		.item{
-			padding: 28px 33px;
+			padding: clamp(10px, 2vw, 28px) clamp(10px, 2.5vw, 33px);
 			border-bottom: 2px solid white;
 			display: flex;
 			flex-direction: column;
@@ -37,6 +37,7 @@
 			align-items: center;
 			justify-content: space-between;
 			position: relative;
+			font-size: clamp(12px,2.1vw,30px);
 			&::after{
 				content: '';
 				width: 12px;
@@ -51,6 +52,17 @@
 			height: 0px;
 			opacity: 0;
 			transition: opacity 0.15s ease-in-out, height 0.15s ease-in-out;
+		}
+	}
+}
+
+@media(max-width: 600px){
+	.qa{
+		&-block{
+			.items,
+			.item{
+				border-width: 1px;
+			}
 		}
 	}
 }

@@ -97,7 +97,22 @@ header{
 		z-index: 9;
 		grid-template-columns: clamp(220px, 30vw, 530px) clamp(200px, 22vw, 290px) 1fr;
 		grid-column-gap: clamp(50px, 5.3vw, 100px);
-		grid-row-gap: clamp(45px, 5vh, 80px);
+		grid-row-gap: clamp(19px, 4.5vh, 80px);
+		overflow: hidden;
+		overflow-y: auto;
+		&::-webkit-scrollbar-track {
+			box-shadow: inset 0 0 0 rgba(0, 0, 0, 0.018);
+			background-color: transparent;
+			border-radius: 2px;
+		}
+		&::-webkit-scrollbar {
+			width: 3px;
+			background-color: var(--color-1);
+		}
+		&::-webkit-scrollbar-thumb {
+			border-radius: 2px;
+			background: var(--color-3);
+		}
 		&.active{
 			display: grid;
 		}
@@ -131,7 +146,8 @@ header{
 			> li{
 				grid-column: 1/-1;
 				position: relative;
-				&:hover{
+				&:hover,
+				&.active{
 					ul{
 						display: flex;
 					}
@@ -140,7 +156,7 @@ header{
 			ul{
 				display: none;
 				flex-direction: column;
-				gap: 40px;
+				gap: clamp(20px, 3vw, 40px);
 				position: absolute;
 				top: 0;
 				left: calc(clamp(220px, 30vw, 530px) + clamp(50px, 7vw, 100px));
@@ -173,10 +189,12 @@ header{
 				color: var(--color-2);
 				font-family: var(--font-2);
 				font-weight: 600;
-				font-size: 18px;
-				line-height: 100%;
+				font-size: clamp(14px, 1.4vw, 18px);
+				line-height: 1;
 				letter-spacing: 0.05em;
 				text-transform: uppercase;
+				border-bottom: 1px dashed white;
+				padding-bottom: clamp(7px, 1.2vw, 19px);
 			}
 			p{
 				margin-bottom: 0;
@@ -254,9 +272,6 @@ header{
 		grid-template-columns: 1fr auto;
 		gap: 6px;
 		align-items: center;
-		&.is-menu{
-
-		}
 		.logo{
 			text-align: left;
 		}
@@ -276,9 +291,6 @@ header{
 }
 
 @media(max-width: 700px){
-	header{
-
-	}
 	.menu{
 		&-trigger{
 			width: 23px;
@@ -294,7 +306,43 @@ header{
 @media(max-width: 600px){
 	.menu{
 		&-wrapper{
-
+			grid-template-columns: 1fr;
+			align-items: flex-start;
+			justify-content: flex-start;
+			flex-direction: column;
+			max-width: 100%;
+			min-height: 100vh;
+			top: 0;
+			right: 0;
+			&.active{
+				display: flex;
+			}
+			.menu,
+			.address,
+			.phone,
+			.social{
+				grid-column: 1;
+				grid-row: auto;
+			}
+			.menu{
+				grid-template-columns: 1fr;
+				&-close{
+					right: 21px;
+					top: 21px;
+				}
+				ul{
+					position: relative;
+					left: 0;
+					padding: 25px 0 10px 0;
+					a{
+						font-weight: 400;
+						font-family: var(--font-1);
+					}
+				}
+			}
+			.logo{
+				margin: 0;
+			}
 		}
 	}
 }

@@ -42,6 +42,11 @@
 			margin-top: clamp(18px, 4.5vw, 60px);
 			margin-left: 2px;
 		}
+		label{
+			span{
+				color: var(--color-2);
+			}
+		}
 	}
 	&-name{
 		border-top: 1px solid white;
@@ -99,6 +104,10 @@
 			.img{
 				width: 90%;
 				grid-column: 1/-1;
+				&::after{
+					bottom: -14%;
+					right: -22%;
+				}
 			}
 		}
 	}

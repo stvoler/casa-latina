@@ -2,7 +2,7 @@
 	&-block{
 		> .item{
 			border-bottom: 1px solid white;
-			padding: 20px 0;
+			padding: clamp(13px, 1.5vw, 20px) 0;
 		}
 		.item{
 			transition: padding 0.15s ease-in-out;
@@ -42,11 +42,11 @@
 			}
 			&::after{
 				content: '';
-				width: 32px;
-				height: 32px;
+				width: clamp(16px, 2.3vw, 32px);
+				height: clamp(16px, 2.3vw, 32px);
 				background-repeat: no-repeat;
 				background-position: center;
-				background-size: auto;
+				background-size: contain;
 				transition: transform 0.15s ease-in-out;
 				background-image: url("data:image/svg+xml,%3Csvg width='32' height='31' viewBox='0 0 32 31' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.956484 18.9269V12.6269H12.8565V0.726875H19.4365V12.6269H31.3365V18.9269H19.4365V30.8269H12.8565V18.9269H0.956484Z' fill='white'/%3E%3C/svg%3E");
 			}

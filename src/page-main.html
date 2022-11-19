@@ -3,7 +3,7 @@
 <link rel="stylesheet" type="text/css" href="css/page-main.css">
 {% endblock %}
 {% block content %}
-<section class="start-block container">
+<section class="start-block container" id="start">
 	<div class="item-1">
 		<div class="img img-1"><img src="img/start-1.jpg"></div>
 		<h1 class="h1 title-1">Casa Latina</h1>
@@ -30,7 +30,7 @@
 		</div>
 	</div>
 </section>
-<section class="style-block container">
+<section class="style-block container" id="style">
 	<div class="title-2">танцевальные <div>стили</div></div>
 	<div class="item">
 		<div class="title-3">Salsa</div>
@@ -345,7 +345,7 @@
 		</div>
 	</div>
 </section>
-<section class="teacher-block container">
+<section class="teacher-block container" id="teacher">
 	<div class="title-2">Преподаватели</div>
 	<div class="teacher-items">
 		<div class="teacher-nav">
@@ -558,7 +558,7 @@
 		</div>
 	</ul>
 </section>
-<section class="how-block container">
+<section class="how-block container" id="how">
 	<div class="title-2"><div>Как</div>начать танцевать?</div>
 	<div class="item">
 		<div class="img"><img src="img/how-1.png"></div>
@@ -581,18 +581,18 @@
 		<p>В назначенное время приходите по адресу: ул. Садовая, д. 28</p>
 	</div>
 </section>
-<section class="trial-block container">
+<section class="trial-block container" id="trial">
 	<div class="title-2"><div>Пробный </div>урок</div>
 	<div class="img"><img src="img/trial.jpg"></div>
 	<form>
 		<div class="title-5">Укажите данные в форме ниже</div>
 		<fieldset class="trial-name">
 			<input type="text" id="trial_name" name="trial_name" placeholder=" " required="">
-			<label for="trial_name">Ваше имя *</label>
+			<label for="trial_name">Ваше имя <span>*</span></label>
 		</fieldset>
 		<fieldset class="trial-tel">
 			<input type="tel" id="trial_phone" name="trial_phone" placeholder=" " required="">
-			<label for="trial_phone">Телефон для связи *</label>
+			<label for="trial_phone">Телефон для связи <span>*</span></label>
 		</fieldset>
 		<fieldset class="trial-message">
 			<input type="text" id="trial_message" name="trial_message" placeholder=" " required="">
@@ -601,7 +601,7 @@
 		<button type="submit" class="btn">Записаться</button>
 	</form>
 </section>
-<section class="qa-block container">
+<section class="qa-block container" id="qa">
 	<div class="title-2"><div>Вопросы </div>и ответы</div>
 	<div class="items">
 		<div class="item">
@@ -642,7 +642,7 @@
 		</div>
 	</div>
 </section>
-<section class="contacts-block container">
+<section class="contacts-block container" id="contacts">
 	<div class="title-2"><div>Наши </div>контакты</div>
 	<div class="contacts-video"><img src="img/contacts-video.jpg"></div>
 	<div class="contacts-info">

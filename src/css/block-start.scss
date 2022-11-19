@@ -88,6 +88,7 @@
 @media(max-width: 600px){
 	.start {
 		&-block {
+			grid-template-columns: 1fr;
 			.item{
 				&-1{
 					&::after{

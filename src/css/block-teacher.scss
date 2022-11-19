@@ -110,6 +110,7 @@
 				&::before{
 					content: attr(data-title);
 					font-weight: 600;
+					font-family: var(--font-2);
 					font-size: clamp(20px,3.8vw,50px);
 					line-height: 1;
 					grid-column: 1/-1;

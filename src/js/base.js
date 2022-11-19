@@ -8,6 +8,7 @@ if (document.getElementsByClassName("menu-wrapper").length) {
   const menuMobile = document.querySelector('.menu-wrapper');
   const menuClose = document.querySelector('.menu-close');
   const menuBg = document.querySelector('.menu-bg');
+  const menuUla = document.querySelectorAll('.menu ul a');
   menuTrigger.onclick = function() {
     this.classList.toggle('active');
     menuMobile.classList.toggle('active');
@@ -23,7 +24,40 @@ if (document.getElementsByClassName("menu-wrapper").length) {
     menuMobile.classList.remove('active');
     headerW.classList.remove('is-menu');
   }
+  menuUla.forEach((element) => {
+    element.addEventListener("click", () => {
+      menuMobile.classList.remove('active');
+      headerW.classList.remove('is-menu');
+    });
+  })
+  // let mobWidth = window.matchMedia("(max-width: 600px)");
+  // if (mobWidth.matches) {
+  //   const menuSub = document.querySelector('.menu > li');
+  //   menuSub.onclick = function() {
+  //     this.classList.toggle('active');
+  //   }
+  // }
 }
+
+const initAnchors = () => {
+  const anchors = document.querySelectorAll('a[href*="#"]')
+  for (let anchor of anchors) {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault()
+      const blockID = anchor.getAttribute('href').substr(1)
+      document.getElementById(blockID).scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      })
+    })
+  }
+}
+
+const initBaseScripts = () => {
+  initAnchors();
+};
+
+document.addEventListener('DOMContentLoaded', initBaseScripts);
 
 
 
