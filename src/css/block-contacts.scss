@@ -2,7 +2,7 @@
 	&-block{
 		display: grid;
 		grid-template-columns: auto 1fr;
-		grid-column-gap: clamp(20px, 5vw, 118px);
+		grid-column-gap: clamp(20px, 5vw, 50px);
 		grid-row-gap: clamp(36px, 4.5vw, 60px);
 		.title-2{
 			grid-column: 1/-1;
@@ -14,8 +14,8 @@
 		.address,
 		.phone,
 		.social{
-			padding-bottom: clamp(18px, 1.5vw, 20px);
-			margin-bottom: clamp(14px, 2vw, 30px);
+			padding-bottom: clamp(17px, 1.5vw, 19px);
+			margin-bottom: clamp(14px, 2vw, 28px);
 			border-bottom: 1px dashed white;
 			div,
 			a{
@@ -56,8 +56,27 @@
 		}
 	}
 	&-info{
+		margin-top: -7px;
 		p{
-			margin-bottom: clamp(9px, 1.4vw, 20px);
+			margin-bottom: clamp(9px, 1.4vw, 16px);
+		}
+	}
+	&-parking{
+		display: flex;
+		align-items: center;
+		grid-column: 1/-1;
+		gap: clamp(15px, 2.4vw, 30px);
+		margin-bottom: clamp(5px, 3.5vw, 50px);
+		.icon{
+			width: clamp(72px, 7vw, 87px);
+			height: clamp(72px, 7vw, 87px);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+			background-image: url("data:image/svg+xml,%3Csvg width='87' height='88' viewBox='0 0 87 88' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M39.206 46.7816H45.2298C46.9372 46.7816 48.3441 46.4879 49.4505 45.9005C50.5706 45.2995 51.4038 44.4731 51.9502 43.4213C52.5103 42.3559 52.7903 41.1334 52.7903 39.7538C52.7903 38.3605 52.5103 37.1448 51.9502 36.1067C51.4038 35.0549 50.5706 34.2422 49.4505 33.6685C48.3305 33.0812 46.9099 32.7875 45.1888 32.7875H39.206V46.7816Z' fill='white'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M43.5 87.9478C67.5244 87.9478 87 68.4721 87 44.4478C87 20.4234 67.5244 0.947754 43.5 0.947754C19.4756 0.947754 0 20.4234 0 44.4478C0 68.4721 19.4756 87.9478 43.5 87.9478ZM30.3342 25.5343V67.4961H39.206V53.8913H46.664C49.8876 53.8913 52.6332 53.2971 54.9007 52.1087C57.1818 50.9204 58.9234 49.2607 60.1254 47.1299C61.3274 44.999 61.9284 42.5403 61.9284 39.7538C61.9284 36.9673 61.3342 34.5086 60.1459 32.3777C58.9712 30.2332 57.2637 28.5599 55.0236 27.3579C52.7834 26.1422 50.0721 25.5343 46.8894 25.5343H30.3342Z' fill='white'/%3E%3C/svg%3E");
+		}
+		.text{
+			max-width: 630px;
 		}
 	}
 	&-video{
@@ -94,8 +113,12 @@
 		&-info{
 			grid-row: 2;
 		}
-		&-map{
+		&-parking{
 			grid-row: 3;
+			margin-bottom: 0;
+		}
+		&-map{
+			grid-row: 4;
 		}
 		&-video{
 			max-width: 100%;
