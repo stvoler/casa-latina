@@ -12,13 +12,13 @@
 			}
 		}
 		.item{
-			padding: clamp(10px, 2vw, 28px) clamp(10px, 2.5vw, 33px);
+			padding: clamp(14px, 2vw, 28px) clamp(10px, 2.5vw, 33px);
 			border-bottom: 2px solid white;
 			display: flex;
 			flex-direction: column;
 			gap: 0px;
 			&.active{
-				gap: 20px;
+				gap: clamp(8px, 1.5vw, 20px);
 				.title-5{
 					&::after{
 						transform: rotate(90deg);
@@ -28,6 +28,11 @@
 				.text{
 					opacity: 1;
 					height: auto;
+					p{
+						&:last-child{
+							margin-bottom: 0;
+						}
+					}
 				}
 			}
 		}
