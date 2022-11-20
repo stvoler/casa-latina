@@ -167,6 +167,7 @@ header{
 				position: absolute;
 				top: 0;
 				left: calc(clamp(220px, 30vw, 530px) + clamp(50px, 7vw, 100px));
+				z-index: 1;
 				a{
 					font-size: clamp(14px, 1.5vw, 20px);
 					font-weight: 500;
