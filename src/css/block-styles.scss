@@ -133,3 +133,19 @@
 		grid-column: 1/-1;
 	}
 }
+
+@media(max-width: 500px){
+	.style{
+		&-block {
+			.item{
+				&.active {
+					.title-3{
+						&::after{
+							margin-top: -20px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

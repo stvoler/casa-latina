@@ -88,6 +88,9 @@ const teacherMobTabs = () => {
     const teacherItem = document.querySelectorAll('.teacher-content .item');
     teacherItem.forEach(el => {
       el.addEventListener('click', () => {
+        teacherItem.forEach((item) => {
+          item.classList.remove("active");
+        });
         el.classList.toggle('active');
       })
     })

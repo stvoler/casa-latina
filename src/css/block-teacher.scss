@@ -73,8 +73,22 @@
 		}
 		.img{
 			grid-column: 2;
-			margin-left: -8%;
+			margin-left: -5%;
 			z-index: -1;
+			max-width: clamp(154px, 48vw, 430px);
+			position: relative;
+			&::after{
+				content: "";
+				background-color: var(--color-2);
+				position: absolute;
+				right: -16%;
+				top: -13%;
+				width: clamp(98px, 20vw, 270px);
+				height: clamp(98px, 20vw, 270px);
+				border-radius: 50%;
+				z-index: -1;
+				transition: 0.15s ease-in-out;
+			}
 		}
 		img{
 			display: block;
