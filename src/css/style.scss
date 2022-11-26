@@ -12,6 +12,7 @@
   --font-size-4: clamp(12px, 1.2vw, 18px);
 }
 
+@import url(lib-fancybox.css);
 @import url(element-button.css);
 @import url(module-header.css);
 @import url(module-footer.css);
