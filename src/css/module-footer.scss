@@ -67,6 +67,8 @@ footer{
 		justify-content: center;
 		border: 2px solid white;
 		cursor: pointer;
+		padding: 0;
+    position: relative;
 		&::after{
 			content: '';
 			display: block;

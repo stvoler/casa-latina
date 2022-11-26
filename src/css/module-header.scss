@@ -303,6 +303,7 @@ header{
 	.menu{
 		&-wrapper{
 			grid-template-columns: 1fr;
+			grid-template-rows: auto 1fr auto auto;
 			align-items: flex-start;
 			justify-content: flex-start;
 			flex-direction: column;
@@ -312,15 +313,16 @@ header{
 			right: 0;
 			overflow: hidden;
 			overflow-y: auto;
-			&.active{
-				display: flex;
-			}
+			// &.active{
+			// 	display: flex;
+			// }
 			.menu,
 			.address,
 			.phone,
 			.social{
 				grid-column: 1;
 				grid-row: auto;
+				margin-top: 1px;
 			}
 			.menu{
 				grid-template-columns: 1fr;

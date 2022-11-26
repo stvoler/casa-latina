@@ -9,6 +9,7 @@ if (document.getElementsByClassName("menu-wrapper").length) {
   const menuClose = document.querySelector('.menu-close');
   const menuBg = document.querySelector('.menu-bg');
   const menuUla = document.querySelectorAll('.menu ul a');
+  const menuSub = document.querySelectorAll('.menu > li');
   menuTrigger.onclick = function() {
     this.classList.toggle('active');
     menuMobile.classList.toggle('active');
@@ -30,13 +31,28 @@ if (document.getElementsByClassName("menu-wrapper").length) {
       headerW.classList.remove('is-menu');
     });
   })
-  // let mobWidth = window.matchMedia("(max-width: 600px)");
-  // if (mobWidth.matches) {
-  //   const menuSub = document.querySelector('.menu > li');
-  //   menuSub.onclick = function() {
-  //     this.classList.toggle('active');
-  //   }
-  // }
+  menuSub.forEach(el => {
+    el.addEventListener('mouseover', () => {
+      menuSub.forEach((item) => {
+        item.classList.remove("active");
+      });
+      el.classList.add('active');
+    })
+  })
+  let mobWidth = window.matchMedia("(max-width: 600px)");
+  if (mobWidth.matches) {
+    menuSub.forEach(el => {
+      menuSub.forEach((item) => {
+        item.classList.remove("active");
+      });
+      el.addEventListener('click', () => {
+        menuSub.forEach((item) => {
+          item.classList.remove("active");
+        });
+        el.classList.add('active');
+      })
+    })
+  }
 }
 
 const initAnchors = () => {
@@ -53,31 +69,36 @@ const initAnchors = () => {
   }
 }
 
+const initFixedHeader = () => {
+  let scrollpos = window.scrollY
+  const header = document.querySelector("header")
+  const scrollChange = 360
+  const add_class_on_scroll = () => header.classList.add("is-fixed")
+  const remove_class_on_scroll = () => header.classList.remove("is-fixed")
+  window.addEventListener('scroll', function() { 
+    scrollpos = window.scrollY;
+    if (scrollpos >= scrollChange) { add_class_on_scroll() }
+    else { remove_class_on_scroll() }
+  })
+}
+
+const initButtons = () => {
+  let buttons = document.querySelectorAll('.btn');
+  buttons.forEach((element) => {
+    element.addEventListener("mouseenter", function(event){
+      event = event || window.event;
+      const rippleX = event.offsetX;
+      const rippleY = event.offsetY;
+      element.style.setProperty('--before-top', rippleY + 'px');
+      element.style.setProperty('--before-left', rippleX + 'px');
+    });
+  });
+}
+
 const initBaseScripts = () => {
   initAnchors();
+  initFixedHeader();
+  initButtons();
 };
 
 document.addEventListener('DOMContentLoaded', initBaseScripts);
-
-
-
-gsap.registerPlugin(ScrollTrigger, Draggable);
-
-ScrollTrigger.update;
-ScrollTrigger.refresh();
-
-let scrollpos = window.scrollY
-
-const header = document.querySelector("header")
-const scrollChange = 360
-
-const add_class_on_scroll = () => header.classList.add("is-fixed")
-const remove_class_on_scroll = () => header.classList.remove("is-fixed")
-
-window.addEventListener('scroll', function() { 
-  scrollpos = window.scrollY;
-
-  if (scrollpos >= scrollChange) { add_class_on_scroll() }
-  else { remove_class_on_scroll() }
-  
-})

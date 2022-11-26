@@ -1,4 +1,6 @@
 .btn{
+	--before-top: 0;
+	--before-left: 0;
 	padding: clamp(10px, 0.9vw, 11px) clamp(32px, 4vw, 60px);
 	min-height: clamp(36px, 3.5vw, 52px);
 	height: fit-content;
@@ -14,21 +16,59 @@
 	letter-spacing: 0.05em;
   cursor: pointer;
 	border: 2px solid white;
-	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
-  &:hover{
-    background-color: var(--color-2);
-		border-color: var(--color-2);
+	position: relative;
+	overflow: hidden;
+	transition: color 0.15s ease-in-out, background-color 0.9s ease-in-out, border-color 0.15s ease-in-out;
+	&::before{
+		content: '';
+		left: var(--before-left); 
+		top: var(--before-top); 
+		border-radius: 50%;
+		background: var(--color-2);
+		height: 14px;
+		width: 14px;
+		position: absolute;
+		display: block;
+		z-index: -1;
+		opacity: 0;
+		pointer-events: none;
 	}
-	&.is-border{
-		outline: solid 1px var(--color-1);
-		background-color: rgba(255,255,255,0);
-		&:hover{
-			outline: solid 2px var(--color-2);
+	@keyframes ink {
+		0% {
+			opacity: 1;
+			transform: scale(1);
+		}
+		100% {
+			opacity: 1;
+			transform: scale(40);
+		}
+	}
+  &:hover{
+    // background-color: var(--color-2);
+		border-color: var(--color-2);
+		&::before{
+			animation: ink 0.7s;
+			animation-fill-mode: both;
 		}
 	}
 	&.is-disable{
     pointer-events: none;
   }
+	&.no-padding{
+		padding: 0;
+		button{
+			padding: clamp(10px,0.9vw,11px) clamp(32px,4vw,60px);
+		}
+	}
+	button{
+		background: none;
+		border: none;
+		color: inherit;
+		font-size: inherit;
+		font-family: inherit;
+		text-transform: inherit;
+		cursor: pointer;
+	}
 }
 
 @media(max-width: 600px){
