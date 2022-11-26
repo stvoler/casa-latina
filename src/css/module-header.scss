@@ -121,6 +121,18 @@ header{
 		}
 		&.active{
 			display: grid;
+			animation: menuW 0.3s;
+			animation-fill-mode: both;
+		}
+		@keyframes menuW {
+			0% {
+				opacity: 0;
+				transform: translateY(-100%);
+			}
+			100% {
+				opacity: 1;
+				transform: translateY(0);
+			}
 		}
 		.logo{
 			grid-column: 1;

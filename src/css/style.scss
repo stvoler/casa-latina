@@ -346,7 +346,7 @@ h5,.h6 {
 
 .subtitle{
   font-weight: 500;
-  font-size: 26px;
+  font-size: clamp(16px, 2vw, 26px);
   line-height: 1.2;
   letter-spacing: 0.05em;
   text-transform: uppercase;
