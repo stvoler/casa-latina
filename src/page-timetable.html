@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="css/page-timetable.css?v=1">
+{% endblock %}
+{% block content %}
+<section class="timetable-page container" id="start">
+	<div class="title title-1">Расписание</div>
+	<div class="calendar">
+
+	</div>
+</section>
+<section class="party-block container" id="parties">
+	<div class="title-2"><div>Вечеринки / </div>Концерты:</div>
+	<div class="items">
+		<a class="item" href="#">
+			<div class="img"><img src="img/party-1.jpg"></div>
+			<div class="title title-5">salsa SWING party</div>
+			<div class="text">
+				<p>29.01.2022</p>
+				<p>21:00 — 00:00</p>
+			</div>
+		</a>
+		<a class="item" href="#">
+			<div class="img"><img src="img/party-2.jpg"></div>
+			<div class="title title-5">4-sided band</div>
+			<div class="text">
+				<p>29.01.2022</p>
+				<p>21:00 — 00:00</p>
+			</div>
+		</a>
+		<a class="item" href="#">
+			<div class="img"><img src="img/party-3.jpg"></div>
+			<div class="title title-5">friendly party</div>
+			<div class="text">
+				<p>29.01.2022</p>
+				<p>21:00 — 00:00</p>
+			</div>
+		</a>
+		<a class="item" href="#">
+			<div class="img"><img src="img/party-4.jpg"></div>
+			<div class="title title-5">SPB SWINGDANCE SUMMIT</div>
+			<div class="text">
+				<p>29.01.2022</p>
+				<p>21:00 — 00:00</p>
+			</div>
+		</a>
+	</div>
+</section>
+{% endblock %}
+{% block js %}
+<script src="js/page-timetable.js"></script>
+{% endblock %}

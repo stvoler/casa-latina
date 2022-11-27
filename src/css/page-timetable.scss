@@ -1,0 +1,21 @@
+@import url(block-party.css);
+
+.timetable{
+	&-page{
+		color: white;
+		padding-top: clamp(70px, 9vw, 125px);
+		.title{
+			&-1 {
+				height: fit-content;
+				font-size: clamp(30px, 10vw, 171px);
+				font-weight: 600;
+				letter-spacing: 0.2em;
+				margin: 0 auto;
+				width: 100%;
+				text-align: center;
+				z-index: 2;
+				margin-bottom: 40px;
+			}
+		}
+	}
+}
