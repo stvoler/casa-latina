@@ -17,5 +17,57 @@
 				margin-bottom: 40px;
 			}
 		}
+		.calendar{
+			h2{
+				font-size: var(--font-size-3);
+			}
+			.fc {
+				&-state-default {
+					box-shadow: none;
+					border: none;
+					background: transparent;
+				}
+				&-state-active, 
+				&-state-down {
+					box-shadow: none;
+					color: var(--color-2) !important;
+				}
+				&-toolbar {
+					display: grid;
+					grid-template-columns: repeat(3,1fr);
+					.fc-left,
+					.fc-right,
+					.fc-center{
+						float: none;
+						grid-row: 1;
+					}
+					.fc-right{						
+						text-align: right;
+						display: flex;
+						align-items: center;
+						justify-content: flex-end;
+					}
+					.fc-center{
+						grid-column: 2;
+						text-align: center;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+					}
+					.fc-clear{
+						display: none;
+					}
+				}
+				button {
+					height: auto;
+					font-size: var(--font-size-3);
+					background-color: transparent;
+					text-shadow: none;
+					color: white;
+					text-transform: uppercase;
+					font-family: var(--font-2);
+				}
+			}
+		}
 	}
 }
