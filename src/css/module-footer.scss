@@ -3,7 +3,7 @@ footer{
 	display: grid;
 	grid-template-columns: auto clamp(72px, 7vw, 98px) 1fr;
 	grid-template-rows: auto auto auto 1fr;
-	grid-column-gap: clamp(40px,6vw,138px);
+	grid-column-gap: clamp(20px,6vw,138px);
 	grid-row-gap: clamp(5px,2vw,30px);
 	padding-top: clamp(90px,5vw,120px);
 	padding-bottom: 40px;

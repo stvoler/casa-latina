@@ -54,6 +54,10 @@
 	&.is-disable{
     pointer-events: none;
   }
+	&.is-big{
+		font-size: clamp(16px, 1.2vw, 18px);
+		padding: 12px clamp(47px,4vw,60px) 13px;
+	}
 	&.no-padding{
 		padding: 0;
 		button{
