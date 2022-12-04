@@ -49,13 +49,15 @@
 					grid-column: 1/-1;
 					z-index: 2;
 					max-width: 626px;
-					margin-top: 80px;
+					margin-top: 90px;
 				}
 			}
 			.img{
 				&-1{
 					max-width: clamp(203px, 51vw, 690px);
 					&::after{
+						width: clamp(55px,22vw,251px);
+						height: clamp(55px,22vw,251px);
 						left: 34vw;
 						top: 38%;
 						z-index: 0;
@@ -79,12 +81,25 @@
 				&-3{
 					grid-row: 2;
 					grid-column: 2/-1;
-					margin-right: clamp(40px,5vw,68px);
+					margin-left: auto;
+					margin-right: clamp(4px,4.8vw,68px);
 					margin-top: -6%;
 					z-index: -1;
+					max-width: clamp(93px, 29vw, 423px);
 					img{
 						margin: 0 0 auto auto;
 					}
+				}
+			}
+		}
+		&.is-flamenco{
+			grid-template-columns: 1fr clamp(250px, 51vw, 786px) 1fr;
+			.title-1{
+				font-size: clamp(46px,46vw,214px);
+			}
+			.img{
+				&-1{
+					max-width: clamp(250px, 51vw, 786px);
 				}
 			}
 		}
@@ -192,6 +207,15 @@
 					}
 				}
 			}
+			&.is-afro{
+				.text{
+					&-1{
+						grid-row: auto;
+						padding-left: 0;
+						margin-top: clamp(12px, 1.4vw, 20px);
+					}
+				}
+			}
 			.text{
 				&-0{
 					display: none;
@@ -238,6 +262,23 @@
 				.text{
 					&-1{
 						grid-column: 1/-1;
+					}
+				}
+			}
+			&.is-afro{
+				.img{
+					&-2{
+						img{
+							margin-left: calc(-1*var(--padding-1));
+							width: 170%;
+							max-width: none;
+						}
+					}
+					&-3{
+						margin-right: 0;
+						img{
+							margin-right: calc(-1*var(--padding-1));
+						}
 					}
 				}
 			}
