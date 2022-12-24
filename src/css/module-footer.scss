@@ -91,6 +91,8 @@ footer{
 		grid-row: 1/4;
     grid-column-gap: clamp(30px,6vw,130px);
     grid-row-gap: clamp(8px,1.8vw,30px);
+		grid-auto-flow: column;
+    grid-template-rows: repeat(4, auto);
 		font-weight: 500;
 	}
 }
